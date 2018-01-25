@@ -1,0 +1,2 @@
+Main-Class: REST
+Class-Path: jawin.jar jawin-stubs.jar
