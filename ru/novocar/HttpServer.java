@@ -193,8 +193,10 @@ public class HttpServer {
 			//TODO sending to 1C
 			String result = sendTo1C(urlFromDMS, contentFromDMS);
 			PrintStream answer = new PrintStream(out, true, "UTF-8");
+			// PrintStream answer = new PrintStream(out, true, "ISO-8859-1");
 			answer.print(getHeader(200) );
-			byte[] buffer = result.getBytes(Charset.forName("UTF-8")); 
+			byte[] buffer = result.getBytes(Charset.forName("UTF-8"));
+			// byte[] buffer = result.getBytes(Charset.forName("ISO-8859-1")); 
 			out.write(buffer, 0, buffer.length);
 		} catch (IOException e) {
 			System.out.println(e.toString() );
